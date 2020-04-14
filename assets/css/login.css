@@ -1,0 +1,37 @@
+@font-face{
+   src:url('../font/poppinsregular.ttf');
+   font-family: 'Poppins';
+}
+@font-face{
+   src:url('../font/Lato-Regular.ttf');
+   font-family: 'Lato';
+}
+body{
+   background-color:#4a69bb;
+}
+
+.card {
+   position:absolute;
+   right:390px;
+   top:140px;  
+   font-family:"Lato";
+}
+.card h4 {
+   font-family:Poppins;
+}
+.card-content button {
+   font-family:Poppins;
+}
+.carousel-inner img{
+   overflow:hidden;
+}
+
+#btn_view , #btn_hide{
+   color:dimgrey; 
+   top:20px;
+   cursor:pointer;
+   font-size:14px;
+}
+#btn_hide{
+   display:none;
+}

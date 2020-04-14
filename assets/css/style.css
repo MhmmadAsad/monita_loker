@@ -33,8 +33,7 @@ input[type=number] {
 	color: white;
 	text-align:center;
 	font-size:18px;
-	font-family:Poppins;
-	margin-top: 10px;
+	font-family:Lato;
 	padding-bottom:15px;
 	padding-top:15px;
 	padding-right:10px;	
@@ -56,8 +55,8 @@ input[type=number] {
 	transition: all .3s ease;
 	-webkit-transition: all .2s ease;
 }
-#nav li.active a {
-	color:#4a69bb;	
+.aktif {
+	color:#4a69bb;
 	border-right: 5px solid #4a69bb; 
 	transition: all .3s ease;
 	-webkit-transition: all .2s ease;
@@ -76,13 +75,20 @@ input[type=number] {
 .nav img {
 	margin-top:20px;
 	margin-bottom:10px;
-	width:80px !important; 
+	width:100px !important; 
 
 }
-.nav span {
+.nav .top {
 	color:#4a69bb;
 	font-size:20px;
 	font-family:Poppins !important;
+}
+.nav p{
+	color:#4a69bb;
+	font-size:16px;
+	margin-top:5px;
+	margin-bottom:10px;
+	font-family:Lato !important;
 }
 /*Navbar*/
 .navbar {
@@ -136,7 +142,7 @@ input[type=number] {
 
 /*SCROLL*/
 
-.table-fixed thead {
+/*.table-fixed thead {
   width: 100%;
   font-family:Lato;
 }
@@ -154,7 +160,7 @@ input[type=number] {
   float: left;	
   font-family:Lato;
   font-size:16px;
-}
+}*/
 
 /*Radio*/
 

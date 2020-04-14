@@ -38,29 +38,29 @@ class Sistem_model extends CI_Model {
 			$this->db->where('ts >=',$waktu_awal );
 		}	
 		
-	   		if($flag == "on"){
-				$checked = "checked";
-				$checkedsatu = "unchecked";
-				$checkednol = "unchecked";
-			}else if ($flag == "1") {
-				$checked = "unchecked";
-				$checkednol = "unchecked";
-				$checkedsatu = "checked";
+		if($flag == "on"){
+			$checked = "checked";
+			$checkedsatu = "unchecked";
+			$checkednol = "unchecked";
+		}else if ($flag == "1") {
+			$checked = "unchecked";
+			$checkednol = "unchecked";
+			$checkedsatu = "checked";
+		}else{
+			$checkedsatu = "unchecked";
+			$checked = "unchecked";
+			$checkednol = "checked";
+		}
+
+		if(isset($flag)){
+
+			if ($flag == "on") {
+				$flag = '';
 			}else{
-				$checkedsatu = "unchecked";
-				$checked = "unchecked";
-				$checkednol = "checked";
+				$flag = $this->db->like('f',$flag);
 			}
 
-			if(isset($flag)){
-
-				if ($flag == "on") {
-					$flag = '';
-				}else{
-					$flag = $this->db->like('f',$flag);
-				}
-
-			}
+		}
 
 		$this->db->order_by('tp','asc');
 		return $this->db->get('data',$limit,$start)->result_array(); 
@@ -70,5 +70,5 @@ class Sistem_model extends CI_Model {
 	{
 		$this->db->order_by('tp','asc');
 		return $this->db->get('data',$limit,$start)->result_array(); 	}
-	
-}
+		
+	}
